@@ -284,6 +284,14 @@ img{
     padding-top: 5rem;
 }
 
+.descriton__card{
+    color: black;
+    background-color: var(--first-color);
+    padding: 2rem 2rem 4rem 2rem;
+    box-shadow: 0 -1px 4px rgba(0,0,0,.15);
+    border-radius: 1.5rem ;
+}
+
 .description__data{
     grid-column: 1/3;
 }
