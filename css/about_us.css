@@ -182,6 +182,7 @@ img{
 .nav__toggle{
     color: var(--title-color);
     font-weight: var(--font-medium);
+    font-size: var(--h2-font-size);
 }
 
 .nav__logo:hover{
@@ -507,7 +508,7 @@ form:hover .fa {
     text-align: center;
     color: var(--text-color-light);
     margin-top: var(--mb-3);
-    color: black;
+    color: rgb(255, 255, 255);
 }
 
 .footer__title,

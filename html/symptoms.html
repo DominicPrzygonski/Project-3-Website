@@ -14,6 +14,9 @@
             <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
             <script src="https://kit.fontawesome.com/d36885d3d5.js" crossorigin="anonymous"></script>
 
+            <!--This script loads the client library. It must be present for the sign in functionality to work-->
+            <script src="https://accounts.google.com/gsi/client" async defer></script>
+
             <!--Main CCS-->
             <link rel="stylesheet" href="../css/symptoms.css">
         </head>
@@ -48,9 +51,25 @@
                                 </a>
                             </li>
                             <li class="nav__item">
-                                <a href="sign_in.html" class="nav__link ">
+                                <!-- <a href="sign_in.html" class="nav__link ">
                                     <i class="uil uil-scenery nav__icon"></i> Sign In
-                                </a>
+                                </a> -->
+                                 <!--This element directs the user to the appropriate pages upon interaction with the sign in button-->
+                        <div id="g_id_onload"
+                        data-client_id="311248302448-q1ad5dbrril9d1tgbjfk20o9fsq9dcgl.apps.googleusercontent.com"
+                        data-login_uri="http://localhost:8888/Project-3-Website/html/index.html"
+                        data-auto_prompt="false">
+                    </div>
+
+                    <!--This element renders the sign in button. The button is customized by the parameters in the data attributes-->
+                    <div class="g_id_signin"
+                        data-type="standard"
+                        data-size="large"
+                        data-theme="outline"
+                        data-text="sign_in_with"
+                        data-shape="rectangular"
+                        data-logo_alignment="left">
+                    </div>
                             </li>
                             
                             <i class="uil uil-times nav__close" id="nav-close"></i>
@@ -88,10 +107,11 @@
 
                             <div class="breed__data">
                                 <h1 class="breed__title" id="breed__title"></h1>
-                                <p class="breed__description" ><u>Temperament</u></p>
-                                <p class="breed__description" id="breed__subtitle"></p>
-                                <p class="breed__description"><u>Brief Description</u></p>
-                                <p class="breed__description" id="breed__description">
+                                <div id="temptitle1"><p class="breed__description breed__descriptionTitle" ><b><u>Temperament</u></b></p></div>
+                                <div id="temptitle2"><p class="breed__description" id="breed__subtitle" ></p></div>
+                                
+                                <p class="breed__description"><b><u>Brief Description</u></b></p>
+                                <p class="breed__description breed__descriptionDesc" id="breed__description">
                                 </p>
                             </div>
                             
@@ -100,25 +120,25 @@
                         </div>
 
                         <ul class="breed__list" id="breed__list">
-                            <li>
+                            <li class="listElements">
                                 <a class="footer__item" id="breed__weight"></a>
                             </li>
-                            <li>
-                                <a class="footer__item" id="breed__length">s</a>
+                            <li class="listElements">
+                                <a class="footer__item" id="breed__length"></a>
                             </li>
-                            <li >
-                                <a class="footer__item" id="breed__wingspan">s</a>
+                            <li class="listElements">
+                                <a class="footer__item" id="breed__wingspan"></a>
                             </li>
-                            <li>
+                            <li class="listElements">
                                 <a class="footer__item" id="breed__lifespan"></a>
                             </li>
-                            <li >
-                                <a class="footer__item" id="breed__habitat">s</a>
+                            <li class="listElements">
+                                <a class="footer__item" id="breed__habitat"></a>
                             </li>
-                            <li>
+                            <li class="listElements">
                                 <a class="footer__item" id="breed__funfact"></a>
                             </li>
-                            <li>
+                            <li class="listElements">
                                 <a class="footer__item" id="breed__identifier"></a>
                             </li>
                         </ul>
@@ -130,9 +150,9 @@
                 <section class="symptom section" id="symptom">
 
                     <h3 class="description__description">
-                        Please check the boxes for symptom's that apply to your pets illness.
+                        Please check the boxes for symptoms that apply to your pets illness
                     </h3>
-
+                    
                     <div class="symptom__container container grid" id="symptomCards">
                             
 
@@ -174,7 +194,13 @@
                                 <a href="about_us.html" class="footer__link">About Us</a>
                             </li>
                             <li>
-                                <a href="sign_in.html" class="footer__link">Sign In</a>
+                                <!--This element renders and handles interaction with the sign out button, directing the user to the appropriate page upon successful sign out-->
+                                <a href="http://localhost:8888/Project-3-Website/html/index.html"
+                                    class="g_id_signout"
+                                    style="color:#FFFFFF;"
+                                    data-type="standard">Sign Out
+                                </a>
+
                             </li>
                         </ul>
 

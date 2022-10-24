@@ -796,7 +796,7 @@ function resultsCardTemplate(card) {
         <a class="fill-div" onclick="sicknessPicked('${card.Disease}')" href="illness.html">
         <div class="result__card grid">
             <div class="result__name">
-                <h3 class="results__subtitle">${card.Disease}</h3>
+                <h3 class="results__subtitle"><b><u>${card.Disease}</u></b></h3>
 
                 
             </div>
@@ -825,17 +825,24 @@ function illnessCardTemplate(card) {
 
         <div class="illness__Card">
             <div class="illness__data">
+                
                 <h1 class="illness__title">${card.Disease}</h1>
+                <div class="symptomBorder"> 
                 <h3 class="illness__subtitle">Symptoms</h3>
-                <p class="illness__description">${card.Signs}</p>
+                <p class="illness__description">&nbsp${card.Signs}</p>
+                </div>
+                <div class="symptomBorder"> 
                 <h3 class="illness__subtitle">How it spreads</h3>
-                <p class="illness__description">${card.Spreads}</p>
+                <p class="illness__description">&nbsp${card.Spreads}</p>
+                </div>
             </div>
 
             <div class="illness__data">
                 <h1 class="illness__title">Treatment</h1>
-                <h3 class="illness__subtitle">B${card.Treatment}</h3>
-                <p class="illness__description"></p>
+                <div class="symptomBorder"> 
+                <h3 class="illness__subtitle">Recommended</h3>
+                <p class="illness__description">${card.Treatment}</p>
+                </div>
             </div>
         </div>
 `
@@ -1025,6 +1032,8 @@ function loadAnimalBreedData(){
     
     
     if(dataValue === "birdData"){
+        document.getElementById("temptitle1").style.display = "none"
+        document.getElementById("temptitle2").style.display = "none"
         document.getElementById("breed__list").children[1].style.display = "block"
         document.getElementById("breed__list").children[2].style.display = "block"
         document.getElementById("breed__list").children[4].style.display = "block"
@@ -1032,6 +1041,8 @@ function loadAnimalBreedData(){
     }
     
     if(dataValue === "rodentData"){
+        document.getElementById("temptitle1").style.display = "none"
+        document.getElementById("temptitle2").style.display = "none"
         document.getElementById("breed__list").children[1].style.display = "block"
         document.getElementById("breed__list").children[2].style.display = "none"
         document.getElementById("breed__list").children[4].style.display = "block"

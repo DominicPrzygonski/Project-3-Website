@@ -182,6 +182,7 @@ img{
 .nav__toggle{
     color: var(--title-color);
     font-weight: var(--font-medium);
+    font-size: var(--h2-font-size);
 }
 
 .nav__logo:hover{
@@ -349,6 +350,14 @@ img{
     
 }
 
+.breed__descriptionTitle{
+    padding-top: 20px;
+}
+
+.breed__descriptionDesc{
+    padding-bottom: 20px;
+}
+
 .breed__title{
     font-size: var(--big-font-size);
 }
@@ -409,11 +418,12 @@ img{
 
 .symptom__container{
     grid-template-columns: repeat(1, 1fr);
+    margin-left: 58px;
 }
 
 /*---Checkbox*/
 .checkbox__card{
-    padding: 30px;
+    padding: 30px 30px 55px 40px;
 }
 
 .checkbox__container {
@@ -523,6 +533,14 @@ img{
     color: var(--first-color-alt);
 }
 
+.listElements{
+    padding: 10px;
+    border: 1px solid rgb(100, 100, 100);
+    list-style-position: inside;
+    border-radius: 5px;
+    background-color: var(--first-color-lighter);
+}
+
 /*---Footer---*/
 
 .footer__container{
@@ -559,7 +577,7 @@ img{
     text-align: center;
     color: var(--text-color-light);
     margin-top: var(--mb-3);
-    color: black;
+    color: rgb(255, 255, 255);
 }
 
 .footer__title,
@@ -756,7 +774,7 @@ img{
     
     .symptom__container{
         grid-template-columns: repeat(3, 1fr);
-    
+        
     }
 
 }

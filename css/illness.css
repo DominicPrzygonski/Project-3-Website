@@ -107,11 +107,11 @@ body{
     font-family: var(--body-font);
     font-size: var(--normal-font-size);
     background-color: var(--body-color);
-    color: var(--text-color);
+    color: black;
 }
 
 h1,h2,h3,h4{
-    color:var(--title-color);
+    color:black;
     font-weight: var(--font-semi-bold);
 }
 
@@ -149,6 +149,16 @@ img{
 }
 
 /*---Layout---*/
+.symptomBorder{
+    color: black;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid rgb(100, 100, 100);
+    list-style-position: inside;
+    border-radius: 15px;
+    background-color: var(--first-color-lighter);
+}
+
 .container{
     max-width: 768px;
     margin-left: var(--mb-1-5);
@@ -182,6 +192,7 @@ img{
 .nav__toggle{
     color: var(--title-color);
     font-weight: var(--font-medium);
+    font-size: var(--h2-font-size);
 }
 
 .nav__logo:hover{
@@ -321,7 +332,7 @@ img{
 
 .illness__subtitle{
     font-size: var(--h3-font-size);
-    color: var(--text-color);
+    color: black;
     font-weight: var(--font-medium);
     margin-bottom: var(--mb-0-75);
 }
@@ -412,7 +423,7 @@ img{
     text-align: center;
     color: var(--text-color-light);
     margin-top: var(--mb-3);
-    color: black;
+    color: rgb(255, 255, 255);
 }
 
 .footer__title,
