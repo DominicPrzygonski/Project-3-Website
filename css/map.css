@@ -98,24 +98,24 @@ body.dark-theme{
     margin: 0;
 }
 
-html{
-    scroll-behavior: smooth;
-}
-
-body{
-    margin: 0 0 var(--header-height) 0;
-    font-family: var(--body-font);
-    font-size: var(--normal-font-size);
-    background-color: var(--body-color);
-    color: var(--text-color);
-}
-
 #map {
-    height: 400px;
-    /* The height is 400 pixels */
-    width: 100%;
-    /* The width is the width of the web page */
-}
+    height: 100%;
+  }
+  
+  /* 
+   * Optional: Makes the sample page fill the window. 
+   */
+  html,
+  body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+#map img {
+    max-width: none !important;
+    max-height: none !important;
+ }
 
 h1,h2,h3,h4{
     color:var(--title-color);
@@ -134,6 +134,8 @@ img{
     max-width: 100%;
     height: auto;
 }
+
+.gmnoprint img { max-width: none; }
 
 /*---Reusable CSS Classes---*/
 .section{
